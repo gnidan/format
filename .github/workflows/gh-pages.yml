@@ -18,8 +18,7 @@ jobs:
         with:
           docs-folder: "docs/"
 
-      - name: Push changes
-        uses: ad-m/github-push-action@master
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
+          folder: "docs/build/html/" # The folder the action should deploy.
